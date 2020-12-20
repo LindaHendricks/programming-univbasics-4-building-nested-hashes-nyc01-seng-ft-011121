@@ -34,5 +34,7 @@ def monopoly_with_third_tier
 end 
 
 def monopoly_with_fourth_tier
- 
+ hash = monopoly_with_third_tier
+  if monopoly_with_third_tier.include? :railroads
+    hash[:railroads][:names][:reading_railroad][]
 end
