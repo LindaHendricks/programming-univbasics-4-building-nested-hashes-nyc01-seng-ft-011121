@@ -26,9 +26,13 @@ def monopoly_with_third_tier
     hash[:railroads][:rent_in_dollars][:three_pieces_owned] = 100
     hash[:railroads][:rent_in_dollars][:four_pieces_owned] = 200
   end
-  hash
+  if monopoly_with_second_tier.include? :railroads
+    hash[:railroads][:names][:reading_railroad] = {}
  end
+end 
 
 def monopoly_with_fourth_tier
-
+   hash = monopoly_with_third_tier
+   if monopoly_with_third_tier.include? :railroads
+     hash[:railroads][:name]
 end
